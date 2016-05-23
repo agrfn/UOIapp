@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D4Q-g1-cKd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UOIapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-ch-nKb">
+                                <rect key="frame" x="8" y="72" width="398" height="652"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7U-Cl-ATt">
+                                        <rect key="frame" x="198" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="toggleSwitches:" destination="BYZ-38-t0r" eventType="valueChanged" id="RIY-0v-LGl"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Amount:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kug-gd-pu0">
+                                        <rect key="frame" x="20" y="0.0" width="160" height="32"/>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subtract Amount:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjT-6z-wm4">
+                                        <rect key="frame" x="20" y="40" width="160" height="28"/>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kYM-yb-71K">
+                                        <rect key="frame" x="59" y="274" width="285" height="31"/>
+                                        <connections>
+                                            <action selector="AmountChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CQz-As-fJx"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGh-Ed-HKQ">
+                                        <rect key="frame" x="20" y="238" width="358" height="28"/>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmF-sp-zDj">
+                                        <rect key="frame" x="36" y="102" width="334" height="100"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="alh-Ht-EaZ"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Person List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-S6-x46">
+                                        <rect key="frame" x="26" y="76" width="215" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="x3T-kl-AV5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTf-uX-bNS">
+                                        <rect key="frame" x="140" y="203" width="134" height="40"/>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="20"/>
+                                        <state key="normal" title="Delete Person"/>
+                                        <connections>
+                                            <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2g8-Ca-BAp"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Whp-Qh-qz5">
+                                        <rect key="frame" x="198" y="35" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="toggleSwitches:" destination="BYZ-38-t0r" eventType="valueChanged" id="Oo5-Sk-MFl"/>
+                                        </connections>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWl-6l-Thh">
+                                        <rect key="frame" x="267" y="69" width="111" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="ejO-Io-chO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="20"/>
+                                        <state key="normal" title="Add Person"/>
+                                        <connections>
+                                            <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jld-9h-dE4"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RHu-ik-voQ">
+                                        <rect key="frame" x="140" y="79" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBs-A1-Mbd">
+                                        <rect key="frame" x="61" y="347" width="127" height="40"/>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="20"/>
+                                        <state key="normal" title="Change Dues"/>
+                                        <connections>
+                                            <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJv-fz-fmI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kYM-yb-71K" firstAttribute="leading" secondItem="PBs-A1-Mbd" secondAttribute="leading" id="2FR-9B-TX7"/>
+                                    <constraint firstAttribute="bottom" secondItem="PBs-A1-Mbd" secondAttribute="bottom" constant="201" id="51Z-ve-IpX"/>
+                                    <constraint firstItem="JjT-6z-wm4" firstAttribute="leading" secondItem="FGh-Ed-HKQ" secondAttribute="leading" id="7dW-21-phj"/>
+                                    <constraint firstItem="RHu-ik-voQ" firstAttribute="leading" secondItem="LTf-uX-bNS" secondAttribute="leading" id="7qR-DY-mah"/>
+                                    <constraint firstItem="kYM-yb-71K" firstAttribute="top" secondItem="LTf-uX-bNS" secondAttribute="bottom" constant="31" id="8CI-ef-4f4"/>
+                                    <constraint firstItem="RHu-ik-voQ" firstAttribute="centerY" secondItem="hWl-6l-Thh" secondAttribute="centerY" id="8RV-YE-bBd"/>
+                                    <constraint firstItem="aCe-S6-x46" firstAttribute="leading" secondItem="wsS-ch-nKb" secondAttribute="leading" constant="26" id="A5O-E5-33t"/>
+                                    <constraint firstItem="V7U-Cl-ATt" firstAttribute="leading" secondItem="Whp-Qh-qz5" secondAttribute="leading" id="FK9-Wx-h24"/>
+                                    <constraint firstItem="aCe-S6-x46" firstAttribute="top" secondItem="JjT-6z-wm4" secondAttribute="bottom" constant="8" symbolic="YES" id="FL7-lT-kQx"/>
+                                    <constraint firstItem="V7U-Cl-ATt" firstAttribute="leading" secondItem="kug-gd-pu0" secondAttribute="trailing" constant="18" id="GbM-w8-Ea3"/>
+                                    <constraint firstItem="VmF-sp-zDj" firstAttribute="leading" secondItem="wsS-ch-nKb" secondAttribute="leading" constant="36" id="Jte-9R-2X6"/>
+                                    <constraint firstItem="VmF-sp-zDj" firstAttribute="top" secondItem="RHu-ik-voQ" secondAttribute="bottom" constant="3" id="KWV-L5-QbW"/>
+                                    <constraint firstAttribute="trailing" secondItem="VmF-sp-zDj" secondAttribute="trailing" constant="28" id="LsX-z5-uOo"/>
+                                    <constraint firstItem="kug-gd-pu0" firstAttribute="top" secondItem="wsS-ch-nKb" secondAttribute="top" constant="64" id="N2s-Wg-cbB"/>
+                                    <constraint firstItem="kYM-yb-71K" firstAttribute="leading" secondItem="wsS-ch-nKb" secondAttribute="leading" constant="61" id="OuL-PX-6Sm"/>
+                                    <constraint firstItem="RHu-ik-voQ" firstAttribute="leading" secondItem="wsS-ch-nKb" secondAttribute="leading" constant="140" id="SRO-yY-9V6"/>
+                                    <constraint firstItem="RHu-ik-voQ" firstAttribute="top" secondItem="JjT-6z-wm4" secondAttribute="bottom" constant="11" id="Ubz-S9-9ym"/>
+                                    <constraint firstItem="hWl-6l-Thh" firstAttribute="leading" secondItem="aCe-S6-x46" secondAttribute="trailing" constant="26" id="YVF-MM-qhq"/>
+                                    <constraint firstItem="kYM-yb-71K" firstAttribute="top" secondItem="FGh-Ed-HKQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Yid-8F-QXn"/>
+                                    <constraint firstItem="LTf-uX-bNS" firstAttribute="top" secondItem="aCe-S6-x46" secondAttribute="bottom" constant="99" id="e4f-HV-yEU"/>
+                                    <constraint firstItem="Whp-Qh-qz5" firstAttribute="top" secondItem="V7U-Cl-ATt" secondAttribute="bottom" constant="4" id="fPb-0S-EwB"/>
+                                    <constraint firstItem="FGh-Ed-HKQ" firstAttribute="centerX" secondItem="wsS-ch-nKb" secondAttribute="centerX" id="fa5-iE-QZk"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWl-6l-Thh" secondAttribute="trailing" constant="20" id="g1Y-LT-8V8"/>
+                                    <constraint firstItem="LTf-uX-bNS" firstAttribute="top" secondItem="hWl-6l-Thh" secondAttribute="bottom" constant="94" id="hgx-ej-0tV"/>
+                                    <constraint firstItem="LTf-uX-bNS" firstAttribute="top" secondItem="VmF-sp-zDj" secondAttribute="bottom" constant="1" id="m7E-OF-FXI"/>
+                                    <constraint firstItem="kug-gd-pu0" firstAttribute="trailing" secondItem="JjT-6z-wm4" secondAttribute="trailing" id="mRj-xY-qMS"/>
+                                    <constraint firstItem="kug-gd-pu0" firstAttribute="leading" secondItem="JjT-6z-wm4" secondAttribute="leading" id="onP-9j-YvB"/>
+                                    <constraint firstItem="hWl-6l-Thh" firstAttribute="trailing" secondItem="FGh-Ed-HKQ" secondAttribute="trailing" id="pwx-xm-K6L"/>
+                                    <constraint firstItem="PBs-A1-Mbd" firstAttribute="top" secondItem="kYM-yb-71K" secondAttribute="bottom" constant="43" id="s1n-Ve-5sh"/>
+                                    <constraint firstItem="kug-gd-pu0" firstAttribute="leading" secondItem="wsS-ch-nKb" secondAttribute="leading" constant="20" id="sUT-bW-QZb"/>
+                                    <constraint firstItem="kug-gd-pu0" firstAttribute="centerY" secondItem="V7U-Cl-ATt" secondAttribute="centerY" id="t9H-P1-WeJ"/>
+                                    <constraint firstItem="JjT-6z-wm4" firstAttribute="top" secondItem="kug-gd-pu0" secondAttribute="bottom" constant="8" symbolic="YES" id="wqy-Du-FQX"/>
+                                    <constraint firstAttribute="trailing" secondItem="kYM-yb-71K" secondAttribute="trailing" constant="56" id="xaB-vC-Ztf"/>
+                                    <constraint firstItem="kug-gd-pu0" firstAttribute="top" secondItem="V7U-Cl-ATt" secondAttribute="top" id="xjS-nN-axq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wsS-ch-nKb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W8M-b7-8Q8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wsS-ch-nKb" secondAttribute="bottom" constant="84" id="gjA-1O-J5E"/>
+                            <constraint firstItem="wsS-ch-nKb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-12" id="mfE-ep-5J5"/>
+                            <constraint firstItem="wsS-ch-nKb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mvY-VT-hfi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fWq-gw-Sz3"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="RHu-ik-voQ" id="EYJ-kr-xpt"/>
+                        <outlet property="AddAmountSwitch" destination="V7U-Cl-ATt" id="aa8-Ij-CSk"/>
+                        <outlet property="AddNewButton" destination="hWl-6l-Thh" id="EHz-zf-in6"/>
+                        <outlet property="AmountLabel" destination="FGh-Ed-HKQ" id="an7-pc-TXu"/>
+                        <outlet property="AmountSlider" destination="kYM-yb-71K" id="cZ5-Zy-TY9"/>
+                        <outlet property="DeletePersonButton" destination="LTf-uX-bNS" id="eZG-Oy-1FD"/>
+                        <outlet property="PersonListPicker" destination="VmF-sp-zDj" id="I03-AF-i7p"/>
+                        <outlet property="ReviewButton" destination="PBs-A1-Mbd" id="ytl-Lq-CBg"/>
+                        <outlet property="SubAmountSwitch" destination="Whp-Qh-qz5" id="q49-9V-dks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VNa-iS-kIw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D4Q-g1-cKd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tL5-Bw-pcn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RA4-3T-zZ6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMG-eD-d9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242.5" y="339.5"/>
+        </scene>
+    </scenes>
+</document>
